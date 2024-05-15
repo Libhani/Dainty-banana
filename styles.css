@@ -1,0 +1,167 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  header {
+    background: #070707;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: style
+    ;
+  }
+  
+  .section {
+    padding: 50px 0;
+  }
+  
+  .gallery {
+    display: inline-block ;
+    grid-template-rows: auto;
+    grid-row-start: auto;
+    grid-row: 52;
+    row-gap: 52;
+    grid-column-start: auto;
+    grid-template-columns: 8ch auto;
+    grid-gap: 350px;
+  }
+  
+  .photo {
+    display: inline-block ;
+    align-items:flex-start center flex-end;
+    justify-content: center;
+  }
+  
+  .photo img {
+    max-width: 350px;
+    height: max-content;
+  }
+  
+  
+  footer {
+    background: #000000;
+    color: #fff;
+    text-align: match-parent;
+    padding: 3px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .contact-bg {
+    background-image: url(jpg/IMG-20240401-WA0006.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Add similar classes for other pages */
+  .portfolio-bg {
+    background-image: url(jpg/IMG-20240401-WA0006.jpg); 
+    background-size: cover;
+    background-position: center ;
+  }
+   
+  .about-bg {
+    background-image: url(jpg/IMG-20240401-WA0006.jpg); 
+    background-size: cover;
+    background-position: center;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-template-rows: repeat(3, auto); /* Three rows */
+    grid-gap: 20px;
+  }
+  
+  .photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .photo img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .photo:hover img {
+    transform: scale(1.1);
+  }
+  
+  .photo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 123, 123, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .photo:hover::after {
+    opacity: 1;
+  }
+  
+  .photo::before {
+    content: 'View Image';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .photo:hover::before {
+    opacity: 1;
+  }
+  /* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: auto; /* Auto rows */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr; /* Single column */
+  }
+}
+  
